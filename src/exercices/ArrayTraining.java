@@ -176,7 +176,11 @@ public class ArrayTraining {
      * eg: {1, 2, 3, 4, 5}
      */
     public int[] concat(int[] first, int[] second) {
-        return concat(first, second);
-        //TODO
+        int[] arr = new int[first.length + second.length];
+
+        System.arraycopy(first, 0, arr, 0, first.length);
+        System.arraycopy(second, 0, arr, first.length, second.length);
+        return arr;
+
     }
 }
